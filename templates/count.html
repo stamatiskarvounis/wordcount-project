@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <center>
+    There are <b> {{count}} </b> words in the text</h1>
+
+    <h3>Your Text:</h3>
+    {{fulltext}}
+
+    <h3>Word Count:</h3>
+
+    {%for word, counttotal in sortedwords %}
+
+    {{word}} - {{counttotal}}
+    </br>
+    {% endfor %}
+    </br>
+
+    <a href="{% url "homepage" %}">Try new text!</a>
+  </center>
+  </body>
+</html>
